@@ -108,27 +108,26 @@
 
 @media (max-width: 575px) {
   .u-section-2 .u-sheet-1 {
-    min-height: 511px;
+    min-height: 515px;
   }
 
   .u-section-2 .u-image-1 {
-    height: 199px;
-    width: 275px;
-    margin-top: 60px;
+    height: 181px;
+    width: 250px;
+    margin-top: 77px;
   }
 
   .u-section-2 .u-text-1 {
     font-size: 1.25rem;
-    width: 265px;
-    margin-top: 20px;
+    width: 189px;
+    margin-top: 30px;
   }
 
   .u-section-2 .u-btn-1 {
-    margin-top: 38px;
+    margin-top: 30px;
   }
 } .u-section-3 {
   background-image: linear-gradient(0deg, rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('/images/tube-bender-2819137_1920.jpg');
-  background-position: 50% 50%;
 }
 
 .u-section-3 .u-sheet-1 {
@@ -169,6 +168,10 @@
 }
 
 @media (max-width: 1199px) {
+   .u-section-3 {
+    background-position: 50% 50%;
+  }
+
   .u-section-3 .u-sheet-1 {
     min-height: 728px;
   }
@@ -884,13 +887,13 @@
   }
 
   .u-section-7 .u-icon-2 {
-    margin-top: 32px;
-    margin-left: 81px;
+    margin-top: 29px;
+    margin-left: 93px;
   }
 
   .u-section-7 .u-text-4 {
     width: auto;
-    margin-top: -34px;
+    margin-top: -31px;
     margin-right: 120px;
   }
 
@@ -906,12 +909,12 @@
   }
 
   .u-section-7 .u-shape-1 {
-    margin-top: -27px;
-    margin-left: 82px;
+    margin-top: -29px;
+    margin-left: 72px;
   }
 
   .u-section-7 .u-text-7 {
     width: auto;
-    margin-top: 13px;
+    margin-top: 15px;
   }
 }
