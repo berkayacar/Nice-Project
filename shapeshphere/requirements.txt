@@ -1,0 +1,7 @@
+Django>=3.0,<5.0
+djangorestframework  # Eğer API kullanıyorsanız
+psycopg2-binary  # PostgreSQL kullanıyorsanız
+mysqlclient  # MySQL kullanıyorsanız
+gunicorn  # Prodüksiyon ortamı için
+whitenoise  # Statik dosya yönetimi için
+django-environ  # Ortam değişkenleri için

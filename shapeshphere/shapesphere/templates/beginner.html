@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beginner Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            background-image: url('yoga.png'); /* Burada resim dosyasının yolunu belirtin */
+            background-size: cover; /* Resmin tam ekrana sığması için */
+            background-position: center; /* Resmi ortalamak için */
+            background-repeat: no-repeat; /* Resmin tekrar etmemesi için */
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            background-color: rgba(255, 255, 255, 0.9); /* Arka plan rengini biraz şeffaf yaparak resmin görünmesini sağlayabilirsiniz */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin-top: 0;
+            font-size: 24px;
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            display: grid;
+            gap: 10px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Beginner Form</h1>
+        <form id="advancedForm" action="{% url 'beginner' %}" method="post">
+            {% csrf_token %}
+            <div>
+                <label for="isim">Name:</label>
+                <input type="text" id="isim" name="isim" required>
+            </div>
+            <div>
+                <label for="soyisim">Surname:</label>
+                <input type="text" id="soyisim" name="soyisim" required>
+            </div>
+            <div>
+                <label for="program">Program:</label>
+                <input type="text" id="program" name="program" value="BEGINNER" disabled>
+            </div>
+            <div>
+                <label for="telefon">Contact Number:</label>
+                <input type="tel" id="telefon" name="telefon" required>
+            </div>
+            <div>
+                <label for="kredi_karti_numarasi">Credit Card Number:</label>
+                <input type="text" id="kredi_karti_numarasi" name="kredi_karti_numarasi" required>
+                <div id="krediKartNumarasiError" class="error" style="display: none;">Credit Card Number must be 16 digits.</div>
+            </div>
+            <div>
+                <label for="son_kullanma_tarihi">Expiration Date:</label>
+                <input type="text" id="son_kullanma_tarihi" name="son_kullanma_tarihi" placeholder="MM/YY" required>
+            </div>
+            <div>
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" required>
+            </div>
+            <div>
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+    <script>
+        document.getElementById('advancedForm').addEventListener('submit', function(event) {
+            var krediKartiNumarasi = document.getElementById('kredi_karti_numarasi').value;
+            var errorElement = document.getElementById('krediKartNumarasiError');
+
+            if (krediKartiNumarasi.length !== 16 || isNaN(krediKartiNumarasi)) {
+                errorElement.style.display = 'block';
+                event.preventDefault();
+            } else {
+                errorElement.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

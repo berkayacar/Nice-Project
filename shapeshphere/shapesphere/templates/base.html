@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ShapeSphere - Fitness center</title>
+
+    {% load static %} <!-- Load the static template tag -->
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- google fonts link-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+
+    <!-- css file link  -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+<body>
+    <!-- header start -->
+    <header class="header">
+        <a href="" id="logo"><img src="{% static 'images/logo.png' %}"><p>Shape<span>Sphere</span></p></a>
+
+        <nav class="navbar">
+
+            <a href="" id="logo2"><img src="{% static 'images/logo.png' %}"><p>Shape<span>Sphere</span></p></a>
+
+            <a href="#">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+            <a href="" id="rec">|</a>
+            <a href="#" id="rec">Log In</a>
+            <a href="" id="rec" class="btn">Sign Up</a>
+        </nav>
+
+        <div class="icons">
+            <div id="search-form" class="fas fa-search"></div>
+            <div id="menu-bars" class="fas fa-bars"></div>
+        </div>
+
+        <div class="form-search">
+            <input type="search" placeholder="search here">
+        </div>
+
+    </header>
+    <!-- header end -->
+
+    <main>
+        {% block content %}
+        <!-- Content from child templates will be inserted here -->
+        {% endblock %}
+    </main>
+
+    <!-- footer section starts -->
+
+    <!-- footer section ends -->
+
+    <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

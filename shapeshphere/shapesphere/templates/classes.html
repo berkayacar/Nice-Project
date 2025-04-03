@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ShapeSphere - Fitness center</title>
+
+    {% load static %} <!-- Load the static template tag -->
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- google fonts link-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+
+    <!-- css file link  -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <style>
+        .schedule{
+            padding: 4.5rem 7% 0.5rem 7%;
+            background: #eee;
+        }
+        
+        .schedule h1{
+            color: var(--main-color);
+            font-size: 30px;
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- header start -->
+    <header class="header">
+        <a href="" id="logo"><img src="{% static 'images/logo.png' %}"><p>Shape<span>Sphere</span></p></a>
+
+        <nav class="navbar">
+
+            <a href="" id="logo2"><img src="{% static 'images/logo.png' %}"><p>Shape<span>Sphere</span></p></a>
+
+            <a href="#">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+            <a href="" id="rec">|</a>
+            <a href="#" id="rec">Log In</a>
+            <a href="" id="rec" class="btn">Sign Up</a>
+        </nav>
+
+        <div class="icons">
+            <div id="search-form" class="fas fa-search"></div>
+            <div id="menu-bars" class="fas fa-bars"></div>
+        </div>
+
+        <div class="form-search">
+            <input type="search" placeholder="search here">
+        </div>        
+
+    </header>
+    <!-- header end -->
+
+    <!-- Schedule section starts -->
+    <section class="schedule">
+        <h1>Our Schedule</h1>
+
+        <div class="box-container">
+            <div class="box">
+                <div class="content">
+                    <h3>Kickbox</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                <div class="icons">
+                    <span><i class="fas fa-clock"></i> 10:00pm</span>
+                    <span><i class="fas fa-calendar"></i> June 12, 2023</span>
+                </div>
+                <a href="#" class="btn">Book now</a><br><br>
+            </div>
+            <div class="box">
+                <img src="{% static 'images/yoga.png' %}">
+            </div>
+
+            <div class="box">
+                <div class="content">
+                    <h3>Body Building</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                <div class="icons">
+                    <span><i class="fas fa-clock"></i> 5:30pm</span>
+                    <span><i class="fas fa-calendar"></i> June 13, 2023</span>
+                </div>
+                <a href="#" class="btn">Book now</a>
+            </div>
+
+            <div class="box">
+                <img src="{% static 'images/06.png' %}">
+            </div>
+
+            <div class="box">
+                <img src="{% static 'images/weight.jpg' %}">
+            </div>
+
+            <div class="box">
+                <div class="content">
+                    <h3>Weight Lifting</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                <div class="icons">
+                    <span><i class="fas fa-clock"></i> 6:30pm</span>
+                    <span><i class="fas fa-calendar"></i> June 14, 2023</span>
+                </div>
+                <a href="#" class="btn">Book now</a><br><br>
+            </div>
+
+            <div class="box">
+                <img src="{% static 'images/cali.png' %}">
+            </div>
+
+            <div class="box">
+                <div class="content">
+                    <h3>Calisthenics</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                <div class="icons">
+                    <span><i class="fas fa-clock"></i> 09:30am</span>
+                    <span><i class="fas fa-calendar"></i> June 15, 2023</span>
+                </div>
+                <a href="#" class="btn">Book now</a>
+            </div>
+        </div>
+    </section>
+    <!-- Schedule section starts -->
+
+    <!-- footer section starts -->
+
+    <!-- footer section ends -->
+
+
+<script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
