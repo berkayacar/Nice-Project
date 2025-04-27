@@ -18,11 +18,11 @@ from django.contrib.auth import views as auth_views
 from django.contrib import admin
 from django.urls import path
 from shapesphere import views
-
 urlpatterns = [
     path('contact/', views.contact_view, name='contact'),
     path('logout/', views.custom_logout, name='logout'),
     path('advanced', views.advanced, name='advanced'),
+    path('cache-test/',views. cache_test_view, name='cache-test'),
     path('intermediate/', views.intermediate, name='intermediate'),
     path('beginner/', views.beginner, name='beginner'),
     path('logout_request/', views.logout_request, name='index'),
@@ -30,6 +30,7 @@ urlpatterns = [
     path('register/', views.register, name='register'),
     path('beginner/login/', views.user_login, name='login'),
     path('intermediate/login/', views.user_login, name='login'),
+    path('llm/', views.generate_llm_response, name='llm-response'),
     path('advanced/login/', views.user_login, name='login'),
     path('login/', views.user_login, name='login')
     # path('classes/', views.classes, name='classes'),

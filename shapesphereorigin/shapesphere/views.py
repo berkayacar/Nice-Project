@@ -9,11 +9,37 @@ from django.http import HttpResponse
 from .models import KullaniciBilgileri
 from django.urls import reverse
 from .models import Contact
+import requests
+from django.http import JsonResponse
+from django.core.cache import cache
+from django.http import JsonResponse
+from django.views.decorators.cache import cache_page
 
+
+def cache_test_view(request):
+    # Cache'e bir değer kaydediyoruz
+    cache.set('my_key', 'Hello from Redis!', timeout=60)  # 60 saniye boyunca cache'te kalacak
+    
+    # Cache'den değeri okuyoruz
+    value = cache.get('my_key')
+
+    return JsonResponse({'cached_value': value})
+def generate_llm_response(request):
+    prompt = request.GET.get("prompt", "Merhaba!")
+    response = requests.post(
+        "http://ollama-llm:11434/api/generate",
+        json={
+            "model": "smollm2:360m",
+            "prompt": prompt,
+            "stream": False
+        }
+    )
+
+    return JsonResponse(response.json())
 def custom_logout(request):
     logout(request)
     return redirect(reverse('index'))
-
+@cache_page(60 * 5)
 def index(request):
     return render(request, 'index.html')
 

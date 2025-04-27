@@ -17,7 +17,6 @@ COPY . /app/
 EXPOSE 8000
 
 # Django migration işlemlerini çalıştır
-RUN python manage.py migrate
 
 # Django server'ı başlat
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]

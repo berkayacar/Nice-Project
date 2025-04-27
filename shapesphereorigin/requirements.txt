@@ -5,3 +5,5 @@ mysqlclient  # MySQL kullanıyorsanız
 gunicorn  # Prodüksiyon ortamı için
 whitenoise  # Statik dosya yönetimi için
 django-environ  # Ortam değişkenleri için
+requests
+django-redis
