@@ -11,13 +11,13 @@ services:
       - "8000:8000"
     depends_on:
       - redis
-      - db  # PostgreSQL'i de ekledik
+      - db  
     environment:
-      - REDIS_HOST=redis
-      - DB_NAME=mydatabase
-      - DB_USER=myuser
-      - DB_PASSWORD=mypassword
-      - DB_HOST=db
+      REDIS_HOST: redis
+      DB_NAME: mydatabase
+      DB_USER: myuser
+      DB_PASSWORD: mypassword
+      DB_HOST: db
     networks:
       - app-net
 
@@ -39,6 +39,7 @@ services:
     restart: always
     networks:
       - app-net
+
   db:
     image: postgres:14
     container_name: postgres-db
@@ -52,9 +53,22 @@ services:
     networks:
       - app-net
 
+  uptime-kuma:
+    image: louislam/uptime-kuma:latest
+    container_name: uptime-kuma
+    restart: unless-stopped
+    ports:
+      - "3001:3001"
+    volumes:
+      - uptime-kuma-data:/app/data
+    networks:
+      - app-net
+
 volumes:
   postgres_data:
   ollama_data:
+  uptime-kuma-data:
+
 networks:
   app-net:
     driver: bridge

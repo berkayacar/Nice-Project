@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="tr"><head>
+{% load static %}
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>Products</title>
+    
+<link rel="stylesheet" href="{% static 'css/products.css' %}" media="screen">
+<link rel="stylesheet" href="{% static 'css/nicepage.css' %}" media="screen">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+    <meta name="generator" content="Nicepage 7.7.3, nicepage.com">
+    
+    
+    
+    
+   
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": ""
+}</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Giriş">
+    <meta property="og:type" content="website">
+  <meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
+  <body>
+  <!-- header start -->
+    <header class="header">
+        <a href="" id="logo"><img src="{% static 'images/logo.png' %}">
+       
+        <p>Shape<span>Sphere</span></p></a>
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+        <nav class="navbar">
+    		<a href="{% url 'index' %}" id="logo2">
+        		<img src="{% static 'images/logo.png' %}">
+        		<p>Shape<span>Sphere</span></p>
+  	  	</a>
+
+		    <a href="{% url 'index' %}">home</a>
+		    <a href="{% url 'index' %}#about">about</a>
+		    <a href="{% url 'index' %}#services">services</a>
+		    <a href="{% url 'index' %}#contact">contact</a>
+		    <a href="{% url 'products' %}">products</a>
+		    <a href="{% url 'cart' %}">cart</a>
+		    <a href="{% url 'test' %}" {% if not user.is_authenticated %} onclick="window.location.href='{% url 'login' %}'" {% endif %}>Chat</a>
+		    <a href="" id="rec">|</a>
+
+		    {% if user.is_authenticated %}
+			<a href="{% url 'logout' %}" id="rec">Log Out</a>
+			<a href="#" id="rec">Hello, {{ user.username }}</a>
+		    {% else %}
+			<a href="{% url 'login' %}" id="rec">Log In</a>
+			<a href="{% url 'register' %}" id="rec" class="btn">Sign Up</a>
+		    {% endif %}
+
+    	</nav>
+
+             
+
+    </header>
+    <!-- header end -->
+    <section class="u-clearfix u-section-1" id="block-1">
+      <div class="u-clearfix u-sheet u-sheet-1"><!--products--><!--products_options_json--><!--{"type":"Recent","source":"","tags":"","count":"0"}--><!--/products_options_json-->
+        <div class="u-expanded-width u-products u-products-1" data-site-sorting-prop="created" data-site-sorting-order="desc" data-items-per-page="6" data-products-datasource="site" data-max-items="0" data-site-category="" data-products-id="products-1">
+          <div class="has-categories-listbox u-list-control"></div>
+          <div class="u-repeater u-repeater-1">
+            <!--product_item--><div class="u-align-center u-container-style u-products-item u-repeater-item u-white u-repeater-item-1" data-product-id="6">
+              <div class="u-container-layout u-similar-container u-valign-top-lg u-valign-top-md u-valign-top-sm u-valign-top-xs u-container-layout-1"><!--product_image-->
+                <a class="u-product-title-link" href="products/protein-powder.html"><img alt="" class="u-expanded-width u-image u-image-contain u-image-default u-product-control u-image-1" src="{% static 'images/weider_premium_whey_protein_tozu_2300_gr_36668-2170806942.jpeg' %}"></a><!--/product_image--><!--product_title-->
+                <h4 class="u-align-center u-product-control u-text u-text-default u-text-1">
+                  <a class="u-product-title-link" href="products/protein-powder.html">Protein Powder</a>
+                </h4><!--/product_title--><!--product_price-->
+                <div class="u-align-center u-product-control u-product-price u-product-price-1" data-add-zero-cents="true">
+                  <div class="u-price-wrapper u-spacing-10"><!--product_old_price-->
+                    <div class="u-old-price" style="text-decoration: line-through !important;">$175.00</div><!--/product_old_price--><!--product_regular_price-->
+                    <div class="u-price u-text-palette-2-base" style="font-size: 1.25rem; font-weight: 700;">$150.00</div><!--/product_regular_price-->
+                  </div>
+                </div><!--/product_price--><!--product_button--><!--options_json--><!--{"clickType":"go-to-page","content":"Ürün Detaylarını Görüntüle"}--><!--/options_json-->
+    <a href="#" class="u-align-center u-border-2 u-border-grey-25 u-btn u-btn-rectangle u-button-style u-none u-product-control u-text-body-color u-btn-1"
+   onclick="addToCart({
+     product_id: 6,
+     product_name: 'Protein Powder',
+     product_price: 150.00,
+     product_description: 'Weider Premium Whey 2300g',
+     product_image: '{% static 'images/weider_premium_whey_protein_tozu_2300_gr_36668-2170806942.jpeg' %}'
+   }); return false;">
+   Buy
+</a>
+
+              </div>
+            </div><!--/product_item--><!--product_item--><div class="u-align-center u-container-style u-products-item u-repeater-item u-white u-repeater-item-2" data-product-id="3">
+              <div class="u-container-layout u-similar-container u-valign-top-lg u-valign-top-md u-valign-top-sm u-valign-top-xs u-container-layout-2"><!--product_image-->
+                <a class="u-product-title-link" href="products/creatine.html"><img alt="" class="u-expanded-width u-image u-image-contain u-image-default u-product-control u-image-2" src="{% static 'images/creatin.jpeg' %}"></a><!--/product_image--><!--product_title-->
+                <h4 class="u-align-center u-product-control u-text u-text-default u-text-2">
+                  <a class="u-product-title-link" href="products/creatine.html">Creatine</a>
+                </h4><!--/product_title--><!--product_price-->
+                <div class="u-align-center u-product-control u-product-price u-product-price-2" data-add-zero-cents="true">
+                  <div class="u-price-wrapper u-spacing-10"><!--product_old_price-->
+                    <div class="u-old-price" style="text-decoration: line-through !important;">$25.00</div><!--/product_old_price--><!--product_regular_price-->
+                    <div class="u-price u-text-palette-2-base" style="font-size: 1.25rem; font-weight: 700;">$19.00</div><!--/product_regular_price-->
+                  </div>
+                </div><!--/product_price--><!--product_button--><!--options_json--><!--{"clickType":"go-to-page","content":"Ürün Detaylarını Görüntüle"}--><!--/options_json-->
+               <a href="#" onclick="addToCart({
+  product_id: 5,
+  product_name: 'Vitamin C',
+  product_price: 15.00,
+  product_description: 'Vitamin C supplement',
+  product_image: '/static/images/vitamin.jpg'
+})" class="u-align-center u-border-2 u-border-grey-25 u-btn u-btn-rectangle u-button-style u-none u-product-control u-text-body-color u-btn-3">
+  Buy
+</a><!--/product_button-->
+              </div>
+            </div><!--/product_item--><!--product_item--><div class="u-align-center u-container-align-center u-container-style u-products-item u-repeater-item u-white u-repeater-item-3" data-product-id="5">
+              <div class="u-container-layout u-similar-container u-valign-top-lg u-valign-top-md u-valign-top-sm u-valign-top-xs u-container-layout-3"><!--product_image-->
+                <a class="u-product-title-link" href="products/vitamin-c.html"><img alt="" class="u-expanded-width u-image u-image-contain u-image-default u-product-control u-image-3" src="{% static 'images/vitamin.jpg' %}"></a><!--/product_image--><!--product_title-->
+                <h4 class="u-align-center u-product-control u-text u-text-default u-text-3">
+                  <a class="u-product-title-link" href="products/vitamin-c.html">Vitamin C</a>
+                </h4><!--/product_title--><!--product_price-->
+                <div class="u-align-center u-product-control u-product-price u-product-price-3" data-add-zero-cents="true">
+                  <div class="u-price-wrapper u-spacing-10"><!--product_old_price-->
+                    <div class="u-old-price" style="text-decoration: line-through !important;">$10.00</div><!--/product_old_price--><!--product_regular_price-->
+                    <div class="u-price u-text-palette-2-base" style="font-size: 1.25rem; font-weight: 700;">$7.00</div><!--/product_regular_price-->
+                  </div>
+                </div><!--/product_price--><!--product_button--><!--options_json--><!--{"clickType":"go-to-page","content":"Ürün Detaylarını Görüntüle"}--><!--/options_json-->
+                <a href="#" onclick="addToCart({
+  product_id: 5,
+  product_name: 'Vitamin C',
+  product_price: 15.00,
+  product_description: 'Vitamin C supplement',
+  product_image: '/static/images/vitamin.jpg'
+})" class="u-align-center u-border-2 u-border-grey-25 u-btn u-btn-rectangle u-button-style u-none u-product-control u-text-body-color u-btn-3">
+  Buy
+</a><!--/product_button-->
+<!--/product_button-->
+              </div>
+            </div><!--/product_item--><!--product_item--><div class="u-align-center u-container-style u-products-item u-repeater-item u-white u-repeater-item-4" data-product-id="4">
+              <div class="u-container-layout u-similar-container u-valign-top-lg u-valign-top-md u-valign-top-sm u-valign-top-xs u-container-layout-4"><!--product_image-->
+                <a class="u-product-title-link" href="products/wristband.html"><img alt="" class="u-expanded-width u-image u-image-contain u-image-default u-product-control u-image-4" src="{% static 'images/bileklik.jpg' %}"></a><!--/product_image--><!--product_title-->
+                <h4 class="u-align-center u-product-control u-text u-text-default u-text-4">
+                  <a class="u-product-title-link" href="products/wristband.html">Wristband</a>
+                </h4><!--/product_title--><!--product_price-->
+                <div class="u-align-center u-product-control u-product-price u-product-price-4" data-add-zero-cents="true">
+                  <div class="u-price-wrapper u-spacing-10"><!--product_old_price-->
+                    <div class="u-old-price" style="text-decoration: line-through !important;">$5.00</div><!--/product_old_price--><!--product_regular_price-->
+                    <div class="u-price u-text-palette-2-base" style="font-size: 1.25rem; font-weight: 700;">$3.00</div><!--/product_regular_price-->
+                  </div>
+                </div><!--/product_price--><!--product_button--><!--options_json--><!--{"clickType":"go-to-page","content":"Ürün Detaylarını Görüntüle"}--><!--/options_json-->
+                <a href="#" onclick="addToCart({
+  product_id: 6,
+  product_name: 'Wristband',
+  product_price: 3.00,
+  product_description: 'Stylish wristband',
+  product_image: '/static/images/bileklik.jpg'
+})" class="u-align-center u-border-2 u-border-grey-25 u-btn u-btn-rectangle u-button-style u-none u-product-control u-text-body-color u-btn-4">
+  Buy
+</a><!--/product_button-->
+<!--/product_button-->
+              </div>
+            </div><!--/product_item--><!--product_item--><div class="u-align-center u-container-style u-products-item u-repeater-item u-white u-repeater-item-5" data-product-id="2">
+              <div class="u-container-layout u-similar-container u-valign-top-lg u-valign-top-md u-valign-top-sm u-valign-top-xs u-container-layout-5"><!--product_image-->
+                <a class="u-product-title-link" href="products/testosterone.html"><img alt="" class="u-expanded-width u-image u-image-contain u-image-default u-product-control u-image-5" src="{% static 'images/testo-new.jpeg' %}"></a><!--/product_image--><!--product_title-->
+                <h4 class="u-align-center u-product-control u-text u-text-default u-text-5">
+                  <a class="u-product-title-link" href="products/testosterone.html">Testosterone</a>
+                </h4><!--/product_title--><!--product_price-->
+                <div class="u-align-center u-product-control u-product-price u-product-price-5" data-add-zero-cents="true">
+                  <div class="u-price-wrapper u-spacing-10"><!--product_old_price-->
+                    <div class="u-old-price" style="text-decoration: line-through !important;">$75.00</div><!--/product_old_price--><!--product_regular_price-->
+                    <div class="u-price u-text-palette-2-base" style="font-size: 1.25rem; font-weight: 700;">$50.00</div><!--/product_regular_price-->
+                  </div>
+                </div><!--/product_price--><!--product_button--><!--options_json--><!--{"clickType":"go-to-page","content":"Ürün Detaylarını Görüntüle"}--><!--/options_json-->
+                <a href="#" onclick="addToCart({
+  product_id: 7,
+  product_name: 'Testosterone',
+  product_price: 50.00,
+  product_description: 'Testosterone supplement',
+  product_image: '/static/images/testo-new.jpg'
+})" class="u-align-center u-border-2 u-border-grey-25 u-btn u-btn-rectangle u-button-style u-none u-product-control u-text-body-color u-btn-5">
+  Buy
+</a><!--/product_button-->
+<!--/product_button-->
+              </div>
+            </div><!--/product_item--><!--product_item--><div class="u-align-center u-container-align-center u-container-style u-products-item u-repeater-item u-white u-repeater-item-6" data-product-id="1">
+              <div class="u-container-layout u-similar-container u-valign-top-lg u-valign-top-md u-valign-top-sm u-valign-top-xs u-container-layout-6"><!--product_image-->
+                <a class="u-product-title-link" href="products/growth-hormone.html"><img alt="" class="u-expanded-width u-image u-image-contain u-image-default u-product-control u-image-6" src="{% static 'images/growth.jpg' %}"></a><!--/product_image--><!--product_title-->
+                <h4 class="u-align-center u-product-control u-text u-text-default u-text-6">
+                  <a class="u-product-title-link" href="products/growth-hormone.html">Growth Hormone</a>
+                </h4><!--/product_title--><!--product_price-->
+                <div class="u-align-center u-product-control u-product-price u-product-price-6" data-add-zero-cents="true">
+                  <div class="u-price-wrapper u-spacing-10"><!--product_old_price-->
+                    <div class="u-old-price" style="text-decoration: line-through !important;">$200.00</div><!--/product_old_price--><!--product_regular_price-->
+                    <div class="u-price u-text-palette-2-base" style="font-size: 1.25rem; font-weight: 700;">$170.00</div><!--/product_regular_price-->
+                  </div>
+                </div><!--/product_price--><!--product_button--><!--options_json--><!--{"clickType":"go-to-page","content":"Ürün Detaylarını Görüntüle"}--><!--/options_json-->
+                <a href="#" onclick="addToCart({
+  product_id: 8,
+  product_name: 'Growth Hormone',
+  product_price: 170.00,
+  product_description: 'Growth Hormone supplement',
+  product_image: '/static/images/growth.jpg'
+})" class="u-align-center u-border-2 u-border-grey-25 u-btn u-btn-rectangle u-button-style u-none u-product-control u-text-body-color u-btn-6">
+  Buy
+</a><!--/product_button-->
+<!--/product_button-->
+              </div>
+            </div><!--/product_item-->
+            
+            
+            
+            
+            
+          </div>
+          <div class="u-list-control"></div>
+        </div><!--/products-->
+      </div>
+    </section>
+    <section class="u-clearfix u-section-2" id="block-2">
+      <div class="u-clearfix u-sheet u-sheet-1"></div>
+    </section>
+    <section class="u-clearfix u-section-3" id="block-3">
+      <div class="u-clearfix u-sheet u-sheet-1"></div>
+    </section>
+<!-- Sayfanın sonuna yerleştirildiğinden emin olun -->
+<script>
+  function getCSRFToken() {
+    const name = 'csrftoken';
+    const cookies = document.cookie.split(';');
+    for (let i = 0; i < cookies.length; i++) {
+      const c = cookies[i].trim();
+      if (c.startsWith(name + '=')) {
+        return decodeURIComponent(c.substring(name.length + 1));
+      }
+    }
+    return '';
+  }
+
+  function addToCart(product) {
+    fetch('/add-to-cart/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRFToken': getCSRFToken()
+      },
+      body: JSON.stringify(product)
+    })
+    .then(response => response.json())
+    .then(data => alert(data.message))
+    .catch(error => alert('Bir hata oluştu: ' + error));
+  }
+</script>
+
+    
+    
+    
+
+
+</body></html>

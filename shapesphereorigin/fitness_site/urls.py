@@ -20,6 +20,7 @@ from django.urls import path
 from shapesphere import views
 urlpatterns = [
     path('contact/', views.contact_view, name='contact'),
+    path('check/', views.check, name='check'),
     path('logout/', views.custom_logout, name='logout'),
     path('advanced', views.advanced, name='advanced'),
     path('cache-test/',views. cache_test_view, name='cache-test'),
@@ -31,8 +32,14 @@ urlpatterns = [
     path('beginner/login/', views.user_login, name='login'),
     path('intermediate/login/', views.user_login, name='login'),
     path('llm/', views.generate_llm_response, name='llm-response'),
+    path('submit-order/', views.submit_order, name='submit_order'),
     path('advanced/login/', views.user_login, name='login'),
-    path('login/', views.user_login, name='login')
+    path('login/', views.user_login, name='login'),
+    path('test/', views.test, name='test'),
+    path('get_user_messages/', views.get_user_messages, name='get_user_messages'),
+    path('cart/', views.cart, name='cart'),
+    path('products/', views.products, name='products'),
+    path('add-to-cart/', views.add_to_cart, name='add_to_cart')
     # path('classes/', views.classes, name='classes'),
 
     # path('book_class/<int:class_id>/', views.book_class, name='book_class'),

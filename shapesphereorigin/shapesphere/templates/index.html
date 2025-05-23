@@ -34,6 +34,9 @@
 		    <a href="{% url 'index' %}#about">about</a>
 		    <a href="{% url 'index' %}#services">services</a>
 		    <a href="{% url 'index' %}#contact">contact</a>
+		    <a href="{% url 'products' %}">products</a>
+		    <a href="{% url 'cart' %}">cart</a>
+		    <a href="{% url 'test' %}" {% if not user.is_authenticated %} onclick="window.location.href='{% url 'login' %}'" {% endif %}>Chat</a>
 		    <a href="" id="rec">|</a>
 
 		    {% if user.is_authenticated %}
@@ -157,7 +160,7 @@
                     <span><i class="fas fa-clock"></i> 09:00am</span>
                     <span><i class="fas fa-calendar"></i> Thr & Mon</span>
                 </div>
-                <a href="https://calendly.com/shapesphere20/kickbox" class="btn" target="_blank">Book now</a><br><br>
+                <a href="https://calendly.com/acar-berk4y/30min" class="btn" target="_blank">Book now</a><br><br>
             </div>
             <div class="box">
                 <img src="{% static 'images/kickbox.png' %}">
@@ -172,32 +175,16 @@
                     <span><i class="fas fa-clock"></i> 5:30pm</span>
                     <span><i class="fas fa-calendar"></i> Mon - Sat</span>
                 </div>
-                <a href="https://calendly.com/shapesphere20/bodybuilding" class="btn" target="_blank">Book now</a>
+                <a href="https://calendly.com/acar-berk4y/kickbox-clone" class="btn" target="_blank">Book now</a>
             </div>
 
             <div class="box">
                 <img src="{% static 'images/06.png' %}">
             </div>
 
-            <div class="box">
-                <img src="{% static 'images/weight.jpg' %}">
-            </div>
+           
 
-            <div class="box">
-                <div class="content">
-                    <h3>Weight Lifting</h3>
-                    <p>Weightlifting strengthens muscles, increases bone density, and boosts metabolism through resistance training.</p>
-                </div>
-                <div class="icons">
-                    <span><i class="fas fa-clock"></i> 6:30pm</span>
-                    <span><i class="fas fa-calendar"></i> Mon - Sat</span>
-                </div>
-                <a href="https://calendly.com/shapesphere20/weight-lifting" class="btn" target="_blank">Book Now</a><br><br>
-            </div>
-
-            <div class="box">
-                <img src="{% static 'images/cali.png' %}">
-            </div>
+           
 
             <div class="box">
                 <div class="content">
@@ -208,8 +195,9 @@
                     <span><i class="fas fa-clock"></i> 11:30am</span>
                     <span><i class="fas fa-calendar"></i> Fri - Sun</span>
                 </div>
-                <a href="https://calendly.com/shapesphere20/calisthenics" class="btn" target="_blank">Book now</a>
+                <a href="https://calendly.com/acar-berk4y/weight-clone" class="btn" target="_blank">Book now</a>
             </div>
+             
         </div>
     </section>
     <!-- Schedule section starts -->
