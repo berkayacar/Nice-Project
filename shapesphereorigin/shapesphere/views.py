@@ -64,33 +64,33 @@ def check(request):
 def add_to_cart(request):
     if request.method == 'POST':
         try:
-            # Gelen veriyi al
-            data = json.loads(request.body)  # JSON formatında veriyi al
+            
+            data = json.loads(request.body)  
             product_name = data.get('product_name')
             product_description = data.get('product_description')
             product_price = data.get('product_price')
             product_image = data.get('product_image')
 
-            # Kullanıcıyı al
+         
             if not request.user.is_authenticated:
                 return JsonResponse({'message': 'Kullanıcı giriş yapmamış.'}, status=401)
             
-            user = request.user  # Giriş yapan kullanıcı
+            user = request.user  
 
-            # Ürün verilerini veritabanına kaydet
+           
             if not product_name or not product_price or not product_image:
                 return JsonResponse({'message': 'Product name, price, and image are required.'}, status=400)
 
-            # Veriyi kaydetmek için Product modelini kullan
+           
             product = Product.objects.create(
-                user=user,  # Giriş yapan kullanıcıyı buraya ekliyoruz
+                user=user,  
                 name=product_name,
                 description=product_description,
                 price=product_price,
-                image=product_image  # image verisi düzgün bir şekilde file path ya da URL olmalı
+                image=product_image  
             )
             Cart.objects.create(user=user, product=product)
-            # Ürün başarıyla eklendi
+           
             return JsonResponse({'message': 'Ürün başarıyla eklendi!', 'product_id': product.id}, status=201)
 
         except json.JSONDecodeError:
@@ -104,20 +104,20 @@ def add_to_cart(request):
 
 
 def products(request):
-    # Burada ürün verilerini veritabanından çekebilirsin
+    
     return render(request, 'products.html')
-
+# views.py Django
 @login_required
 def cart(request):
-    user_cart = Cart.objects.filter(user=request.user)  # Kullanıcıya ait sepetteki ürünleri al
-    total_price = sum(cart_item.product.price for cart_item in user_cart)  # Toplam fiyat
+    user_cart = Cart.objects.filter(user=request.user)  
+    total_price = sum(cart_item.product.price for cart_item in user_cart) 
     return render(request, 'cart.html', {'cart_items': user_cart, 'total_price': total_price})
     
 def cache_test_view(request):
-    # Cache'e bir değer kaydediyoruz
+    
     cache.set('my_key', 'Hello from Redis!', timeout=60) 
     
-    # Cache'den değeri okuyoruz
+   
     value = cache.get('my_key')
 
     return JsonResponse({'cached_value': value})
